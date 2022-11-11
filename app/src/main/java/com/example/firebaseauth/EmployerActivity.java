@@ -1,8 +1,13 @@
 package com.example.firebaseauth;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +23,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EmployerActivity extends AppCompatActivity {
-
     public EditText editname;
     public EditText editcname;
     public EditText editphone;
@@ -38,10 +42,35 @@ public class EmployerActivity extends AppCompatActivity {
 
     private FirebaseDatabase bd = FirebaseDatabase.getInstance();
     private DatabaseReference root = bd.getReference();
+    Button  button4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employer);
+
+
+        button4 = findViewById(R.id.button4);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("Notification","Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //notification goes here
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(EmployerActivity.this,"Notification");
+                builder.setContentTitle("Successfully!");
+                builder.setContentText("Stand by, till you get Notified on your Email if you're hired");
+                builder.setSmallIcon(R.drawable.ic_baseline_circle_notifications_24);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(EmployerActivity.this);
+                managerCompat.notify(1,builder.build());
+            }
+        });
 
         mName = findViewById(R.id.editText2);
         mCompany= findViewById(R.id.editText4);
@@ -120,7 +149,6 @@ public class EmployerActivity extends AppCompatActivity {
             }
         });
     }
-
     public void enter(View view) {
     }
 }

@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 public class Choose extends AppCompatActivity {
 
+    Button button7;
+    Button button8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,26 @@ public class Choose extends AppCompatActivity {
                 startActivity(new Intent(Choose.this,EmployerActivity.class));
                 finish();
                 Toast.makeText(Choose.this, "Successful!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        button7 = findViewById(R.id.button7);
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Choose.this, EmployerActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        button8 = findViewById(R.id.button8);
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Choose.this, Employee.class);
+                startActivity(intent);
+
             }
         });
     }
