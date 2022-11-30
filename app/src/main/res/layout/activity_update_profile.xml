@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agent Dalisay"
+            android:text="Jonesy Dalisay"
             android:textColor="@android:color/black"
             android:textSize="20dp"
             android:layout_marginTop="8dp"
