@@ -10,17 +10,28 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".display"/>
+        <activity
+            android:name=".UpdateProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".display" />
         <activity android:name=".Choose" />
-        <activity android:name=".Employee"
-            android:parentActivityName=".Choose"/>
-        <activity android:name=".EmployerActivity"
-            android:parentActivityName=".Choose"/>
+        <activity
+            android:name=".Employee"
+            android:parentActivityName=".Choose" />
+        <activity
+            android:name=".EmployerActivity"
+            android:parentActivityName=".Choose" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".RegActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RegActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
