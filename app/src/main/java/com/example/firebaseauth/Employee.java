@@ -2,7 +2,7 @@ package com.example.firebaseauth;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Objects;
 
 
-public class Employee extends AppCompatActivity {
+public class Employee extends Activity {
     public EditText editename;
     public EditText editposition;
     public EditText editpcity;

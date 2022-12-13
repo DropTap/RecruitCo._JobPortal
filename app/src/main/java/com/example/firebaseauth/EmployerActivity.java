@@ -1,6 +1,6 @@
 package com.example.firebaseauth;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -22,7 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EmployerActivity extends AppCompatActivity {
+public class EmployerActivity extends Activity {
     public EditText editname;
     public EditText editcname;
     public EditText editphone;

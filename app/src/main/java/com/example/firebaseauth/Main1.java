@@ -1,13 +1,13 @@
 package com.example.firebaseauth;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 
-public class Main1 extends AppCompatActivity {
+public class Main1 extends Activity {
     //First we must create a variable for the activity
 
     private Button buttonA;

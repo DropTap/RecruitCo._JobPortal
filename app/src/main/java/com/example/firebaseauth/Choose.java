@@ -1,6 +1,6 @@
 package com.example.firebaseauth;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Choose extends AppCompatActivity {
+public class Choose extends Activity {
 
     Button button7;
     Button button8;
+    Button profileButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,16 @@ public class Choose extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Choose.this, Employee.class);
+                startActivity(intent);
+
+            }
+        });
+
+        profileButton = findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Choose.this, UpdateProfile.class);
                 startActivity(intent);
 
             }

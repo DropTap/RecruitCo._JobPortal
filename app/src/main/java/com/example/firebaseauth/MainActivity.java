@@ -1,6 +1,6 @@
 package com.example.firebaseauth;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private Button register;
     private Button login;
 

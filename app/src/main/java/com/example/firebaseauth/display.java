@@ -1,5 +1,5 @@
 package com.example.firebaseauth;
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 import androidx.annotation.NonNull;
 
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class display extends AppCompatActivity {
+public class display extends Activity {
     private TextView textview;
     public FirebaseFirestore db=FirebaseFirestore.getInstance();
     private CollectionReference ref = db.collection("employers");
